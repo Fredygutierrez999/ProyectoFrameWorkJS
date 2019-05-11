@@ -1,0 +1,14 @@
+picture img{
+    margin: 10px;
+    animation: App-logo-spin 1 2s;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+  }
+  
