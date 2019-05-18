@@ -105,11 +105,7 @@ class Regristro extends Component {
 
             fetch('http://localhost:3001/usuarios/insertaNuevoUsuario?' + strParametros, {
                 method: 'post',
-                dataType: 'json',
-                headers: {
-                    //'Accept': 'application/json',
-                    //'Content-Type': 'application/json'
-                }
+                dataType: 'json'
             })
                 .then((response) => {
                     return response.json()

@@ -87,7 +87,8 @@ router.get('/validarUsuario', function (req, res, next) {
     /*
     * Llama datos BD
     */
-    validarInicioSesion(req, res, function (_error, res, req, _resultadoBD) {
+    validarInicioSesion(req, res, 
+      function (_error, res, req, _resultadoBD) {
       if (_error) {
         res.json({ Proceso: false, mensajeErro: _error });
       } else {
@@ -123,6 +124,8 @@ router.post('/insertaNuevoUsuario', function (req, res, next) {
     strValidaciones = "Debe indicar un usuario";
   }
   if (strValidaciones == "") {
+    
+    
     validarExistencia(req, res, function (_error, res, req, _resultadoBD) {
       if (_error) {
         res.json({ Proceso: false, mensajeErro: _error });
